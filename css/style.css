@@ -75,6 +75,7 @@ header{
     height: 160px;
     display: flex;
     justify-content: space-between;
+    position: relative;
 }
 
 .minha_conta{
@@ -94,6 +95,20 @@ header{
     flex-direction: column;
     justify-content: center;    
     font-size: min(24px, 2vw);
+    position: relative;
+}
+
+.quantidade{
+    position: absolute;
+    top: -5px;
+    right: 45px;
+    background: #FEFEFE /*#000000*/;
+    padding: 0 10px;
+    border-radius: 40%;
+    color: #000000 /*#FEFEFE*/;
+    border: 1px solid #000000;
+
+
 }
 
 .meu_carrinho img{
@@ -479,6 +494,18 @@ h3{
     font-size: 1.25rem; 
 }
 
+ul{/*estililização do check point. */
+    list-style-type: '\2705\00A0\00A0';
+    /*Código 2705 utilizado da emojipedia. 
+    A '\' é para colocar na frente do código para o check tornar visível.
+    00A0 dá 1 espaço entre o check e a próxima letra. Usei 2 espaços*/
+    list-style-position: inside;
+}
+
+li{
+    margin-bottom: 10px;
+}
+
 /* --- CSS página PRODUTOS --- */
 
 .produtos{
@@ -656,14 +683,18 @@ label{ /* configuração para fazer o Login: e Senha: aparecer no campo de digit
 }
 
 .inserir:focus + label{ /*quando campo estiver clicado o texto Login: Senha: sobe e altera cor para vermelho*/
-    transform: translateY(-14px); /* label sobe quando clicar no campo -- esse evento não funcionou no chrome, mas funciona no firefox dev*/
+    transform: translateY(-14px); /* label sobe quando clicar no campo */
     color: #FF0101;
 }
 
 .inserir:not(:placeholder-shown) + label{ /*ao digitar no campo Login: e Senha: permanecerão acima e na cor vermelha e tornará negrito*/
-    transform: translateY(-14px); /*esse evento não funcionou no chrome, mas funciona no firefox dev*/
+    transform: translateY(-14px);
     color: #FF0101;
     font-weight: bold;
+}
+
+.inserir::placeholder{ /*deixar o placeholder (Digite aqui...) transparente*/
+    color: transparent;
 }
 
 .clic{ /*botão de ENTRAR*/
