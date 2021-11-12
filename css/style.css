@@ -1,0 +1,924 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
+/*importando a fonte*/
+
+/* --- CSS pagina INDEX - HOME --- */
+
+* { /*zerando a configuracao padrão do css e declarando a fonte para todo o css*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Bree Serif', serif;
+}
+
+/* CABEÇALHO */
+
+header{
+    background-color: #B8BCBD; /*definindo cor de fundo e altura do header*/
+    height: 315px;
+}
+
+.parte1{
+    width: 1520px; /* definindo largura para espaçar laterais da tela */
+    margin: 0 auto;
+    height: 217px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.parte1 img{
+    width: 100%;
+    height: 100%;
+}
+
+.barra_pesquisa{
+    background: #FEFEFE;
+    width: 40%;
+    height: 3rem;
+    border-radius: 15px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #FF0101;
+    display: flex;
+    flex-direction: row;
+}
+
+::-webkit-input-placeholder{ /* cor do texto "Pesquise..." na barra de pesquisa */
+    color: #C1C0C0;
+}
+
+.pesquisa{
+    border: none;
+    background: none;
+    outline: none;
+    padding: 0;
+    color: #000000;
+    font-size: 1.25rem;
+    width: 540px;
+    margin-left: 2%; 
+}
+
+.pesquisa_btn{
+    width: 3rem;
+    height: 2.75rem;
+    border-radius: 40%;
+    margin-right: 2%;
+}
+
+.pesquisa_btn img{
+    width: 100%;
+    height: 100%;
+}
+
+.cadastro_compras{ /*definindo o espaco container para minha conta e meu carrinho*/
+    width: 350px;
+    height: 160px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.minha_conta{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: min(24px, 2vw); /* min() usará o menor valor, entre os 2 valores declarados, para exibir de acordo com tam da tela*/
+}
+
+.minha_conta img{
+    width: 80%;
+    height: 80%;
+}
+
+.meu_carrinho{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    
+    font-size: min(24px, 2vw);
+}
+
+.meu_carrinho img{
+    width: 70%;
+    height: 70%;
+}
+
+hr{ /*linha vermelha que divide o cabeçalho em 2 partes*/
+    width: 100%;
+    border: 0;
+    border-top: 3px solid #FF0101;
+    opacity: 1;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.parte2-menu{
+    width: 100%; 
+    margin: 0 auto;
+}
+
+.gridposicao2{ /*definição da altura da área de menu*/
+    height: 5.5rem; /*30%*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu{
+    width: 100%; /*definindo o tamanho do container consegue encaixar os itens internos com flexbox*/
+    display: flex;
+    justify-content: space-around;
+}
+
+.menu a{
+    color: #000000;
+    text-decoration: none;
+    text-transform: initial;
+    font-size: min(36px, 3vw);
+}
+
+/* BANNER */
+
+.banner{
+    width: 100vw;
+    height: 50vw;
+    background-image: url(../img/triomariobros.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+/* SEÇÃO DE DESTAQUES */
+
+.campo_titulo{ /*definindo o tamanho do container consegue encaixar os itens internos com flexbox*/
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box{
+    background: #000000;
+    width: 35rem; 
+    height: 4.5rem; 
+    padding: 0.25rem; 
+    border-radius: 40px;
+    display: flex; /*essa configuracao...(continua no .box p)*/
+    justify-content: center;
+    align-items: center;
+}
+
+.box p{
+    margin: 0;
+    color: #FEFEFE;
+    font-size: min(44px, 7vw); /*48px*/
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    text-align: center; /*... + essa configuracao, alinha o texto no centro*/
+}
+
+.body{
+    background: #FEFEFE;
+}
+
+.destaques{ /*configuracao externa dos cards*/
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:center;
+    column-gap: 200px;
+    row-gap: 50px;
+}
+
+.destaques .card{ /*configuracoes dos itens internos do card*/
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    background: #FEFEFE;
+    box-shadow: 3px 3px 2px 1px #c1c0c0; /*leve sombreado nos cards*/
+    border-radius: 15px;
+    width: 17rem; /*300px*/
+}
+
+.destaques .card:hover{ /*efeito de aumento do card ao passar o mouse acima*/
+    transform: scale(1.1);
+    transition-duration: 0.2s;
+}
+
+.destaques .card .icon{ /*definindo um tanho para as imagens dos cards*/
+    width: 14rem; /*250px*/
+    height: 14rem;  /*250px*/
+}
+
+.destaques .card img{ /*definindo usar 100% do tamanho das imagens estipulado acima*/
+    width: 100%;
+}
+
+.destaques .card h3{
+    margin: 10px 0;
+    font-size: 20px;
+}
+
+.destaques .card span{
+    color: #EE5151;
+    text-decoration: line-through;
+}
+
+.destaques .card button{
+    margin-bottom: 10px 0px;
+    cursor: pointer;
+    border-radius: 30px;
+    text-transform: uppercase;
+    color: #000000;
+    background: #dad8d8;
+    border: 0;
+    padding: 10px 10px;
+    margin: 25px 25px;
+    font-size: 1.5rem; /*24px*/
+    width: 12rem; /*200px*/
+}
+
+.destaques .card button:hover{ /*efeito de transicao de cor do botao comprar ao passar o mause em cima*/
+    background: #000000;
+    color: #FEFEFE;
+    transition: all 0.5s;
+}
+
+/* TEXTOS INFORMATIVOS */
+
+.info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.textoPrincipal{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 100px;
+    font-size: min(34px, 10vw); /*34px*/
+}
+
+.avisos{
+    width: 1200px; /* definindo tamanho container dos textos/imgs informativos*/
+    height: 240px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.avisos .parcelamento img{
+    width: 70%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10%;
+}
+
+.avisos .entrega img{
+    width: 70%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10%;
+}
+
+.avisos .seguranca img{
+    width: 70%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10%;
+}
+
+.avisos .assistencia img{
+    width: 70%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10%;
+}
+
+.avisos .parcelamento span{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: min(24px, 5vw); /*20px*/
+    text-align: center;
+    margin-top: 5%;
+}
+
+.avisos .entrega span{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: min(24px, 5vw); /*20px*/
+    text-align: center;
+    margin-top: 20%;
+}
+
+.avisos .seguranca span{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: min(24px, 5vw); /*20px;*/
+    text-align: center;
+    margin-top: 15%;
+}
+
+.avisos .assistencia span{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: min(24px, 5vw); /*20px;*/
+    text-align: center;
+    margin-bottom: 30%;
+}
+
+.asterisco{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 10px;
+    font-size: min(18px, 4vw); /*18px*/
+}
+
+hr{
+    width: 100%;
+    border: 0;
+    border-top: 3px solid #FF0101;
+    opacity: 1;   
+}
+
+/* RODAPÉ */
+
+footer{
+    background-color: #B8BCBD;
+    height: 315px;
+}
+
+#rodape{   
+    width: 100%;
+    margin: 0;
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr 0.5fr;
+    column-gap: 1rem;
+    justify-content: center;
+}
+
+.endereco{
+    text-align: center;
+    font-size: min(20px, 5vw); /*20px*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.formpag_horariofunc{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 1rem;
+}
+
+.formpag_horariofunc img{
+    max-width: 100%;
+}
+
+
+.formpag_horariofunc span{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-size: min(20px, 5vw); /*20px*/
+}
+
+.redes_sociais{
+    text-align: center;
+    font-size: min(20px, 5vw); /*20px*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 1rem;
+}
+
+.icon_redesSociais{
+    display: flex;
+    flex-direction: row;
+    gap: 25px; 
+}
+
+.icon_redesSociais img{
+    max-width: 100%;
+}
+
+/* --- CSS página QUEM SOMOS? --- */
+
+main{
+    min-width: 320px;
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    row-gap: 20px;
+    background-color: #C1C0C0;
+    padding: 20px;
+    border: 2px dashed #FF0101;
+}
+
+.interrogacao{
+    width: 40vw;
+    height: 40vw;
+}
+
+h1{
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+h2{
+    font-size: 1.75rem;
+    text-align: center;
+}
+
+h3{
+    font-size: 1.25rem;
+    text-align: center;
+}
+
+.diferenciais{
+    font-size: 1.25rem;
+    text-align: center;
+}
+
+.pqs{
+    text-align: center;
+    font-size: 1.25rem; 
+}
+
+/* --- CSS página PRODUTOS --- */
+
+.produtos{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:center;
+    column-gap: 200px;
+    row-gap: 50px;
+    margin-bottom: 100px;
+}
+
+.card_prod{
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    background: #FEFEFE;
+    box-shadow: 3px 3px 2px 1px #c1c0c0; /*leve sombreado nos cards*/
+    border-radius: 15px;
+    border: 1px solid #C1C0C0;
+    width: 18rem;
+    height: 30rem;
+}
+
+.card_prod .icone{
+    width: 16rem;
+    height: 16rem;
+}
+
+.card_prod .icone img{
+    width: 100%;
+}
+
+.card_prod .botao{
+    margin-bottom: 10px 0px;
+    cursor: pointer;
+    border-radius: 30px;
+    text-transform: uppercase;
+    color: #000000;
+    background: #dad8d8;
+    border: 0;
+    padding: 10px 10px;
+    margin: 20px 20px;
+    font-size: 1.25rem;
+    width: 12rem;
+}
+
+.card_prod button:hover{
+    background: #000000;
+    color: #FEFEFE;
+    transition: all 0.5s;
+}
+
+/* --- CSS página CURIOSIDADES --- */
+
+.titulo{
+    width: 250px;
+    height: 300px;
+    margin: auto;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 10px; 
+}
+
+.titulo img{
+    width:80%
+}
+
+.pergunta{
+    width: 300px;
+    height: 50px;
+    background-color: #000000;
+    color: #FEFEFE;
+    border-radius: 40px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.curiosidades{
+    max-width: 1000px;
+    min-width: 320px;
+    margin: auto;
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 30px;   
+}
+
+.curios1 img{
+    width: 80%;
+}
+
+.curios2 img{
+    width: 100%
+}
+
+.curios1{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    box-shadow: 5px 5px 2px 1px #B8BCBD;
+    border: 1px solid #B8BCBD;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.curios2{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    box-shadow: -5px 5px 2px 1px #B8BCBD;
+    border: 1px solid #B8BCBD;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.ptodos{
+    font-size: 1.5rem;
+    text-align:center;
+}
+
+/* --- CSS página MINHA CONTA --- */
+
+.caixa_login{ /*estruturando o espaço de login*/
+    width: 350px;
+    margin: auto;
+    background: #C1C0C0;
+    border-radius: 20% 0;
+    box-shadow: 1px 2px 5px #EE5151;
+    border: 1px solid #EE5151;
+    padding: 50px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    row-gap: 20px;
+}
+
+.inserir{ /*inserir é uma classe dada ao input para diferenciar do input do campo de busca*/
+    width: 100%;
+    height: 46px;
+    background: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #000000;
+    transition: 0.5s ease-in-out;
+}
+
+.entrada{ /*div pai que vai abraçar o input e o label*/
+    position: relative; 
+    margin-bottom: 20px;
+}
+
+label{ /* configuração para fazer o Login: e Senha: aparecer no campo de digitação*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(18px); /*o label desce*/
+    transition: all .25s;
+}
+
+.inserir:focus + label{ /*quando campo estiver clicado o texto Login: Senha: sobe e altera cor para vermelho*/
+    transform: translateY(-14px); /* label sobe quando clicar no campo*/
+    color: #FF0101;
+}
+
+.inserir:not(:placeholder-shown) + label{ /*ao digitar no campo Login: e Senha: permanecerão acima e na cor vermelha e tornará negrito*/
+    transform: translateY(-14px);
+    color: #FF0101;
+    font-weight: bold;
+}
+
+.clic{ /*botão de ENTRAR*/
+    width: 10rem;
+    padding: 5px 20px;
+    margin: 20px 20px;
+    border-radius: 30px;
+    border: 1px solid #000000c9;
+    text-transform: uppercase;
+    font-size: 1.25rem;
+    cursor: pointer;
+    color: #000000;
+    background: #FEFEFE;
+}
+
+.clic:hover{ /*efeito de mudança de cor ao passar o mouse acima*/
+    background: #000000;
+    color: #FEFEFE;
+    transition: 0.5s ease-in-out;
+}
+
+.links{
+    text-align: center;
+}
+
+.cadastrar{
+    color: #000000;
+}
+
+/* APLICANDO @media query PARA RESPONSIVIDADE - breakpoints - */
+
+@media (max-width: 1920px){ 
+    .destaques{ /*espaçamento para 6 cards em 2 filas no index*/
+        column-gap: 300px;
+        row-gap: 80px;
+    }
+
+    .produtos{ /* PRODUTOS */
+        column-gap: 300px;
+        row-gap: 80px;
+    }
+}
+
+@media (max-width: 1520px){
+    .parte1{ 
+        width: 97%;
+    }
+
+    .destaques{ 
+        column-gap: 150px;
+        row-gap: 50px;
+    }
+
+    .produtos{ /* PRODUTOS */
+        column-gap: 150px;
+        row-gap: 50px;
+    }
+}
+
+@media (max-width: 1259px){
+    .produtos{ /* PRODUTOS */
+        column-gap: 80px;
+        row-gap: 50px;
+    }
+}
+
+@media (max-width: 1156px){
+    .avisos{
+        width: 90%;
+        font-size: min(18px, 3vw);
+        column-gap: 2rem;
+    }
+
+    .endereco, .formpag_horariofunc span, .redes_sociais{
+        font-size: min(18px, 2.5vw);
+    }
+
+    .formpag_horariofunc img{
+        max-width: 90%;
+    }
+
+    .icon_redesSociais img{
+        max-width: 80%;
+    }
+
+    main{ /* QUEM SOMOS? */
+        width: 80%;
+    }
+}
+
+@media (max-width: 1084px){
+    .curiosidades{ /* CURIOSIDADES */
+        width: 80%;
+    }
+}
+
+@media (max-width: 950px){    
+    .barra_pesquisa{
+        width: 40%;
+        height: 2.75rem;
+    }
+
+    .pesquisa{
+        font-size: min(24px, 2vw); 
+    }
+
+    .pesquisa_btn{
+        width: 3rem;
+        height: 2.5rem;
+    }
+
+    .banner{
+        background-image: url(../img/videogames950.svg);
+    }
+
+    .avisos{
+        width: 80%;
+        column-gap: 2rem;
+    }
+    
+    .avisos .parcelamento span, .avisos .entrega span, .avisos .seguranca span, .avisos .assistencia span{
+        font-size: min(18px, 4vw);
+    }
+
+    .ptodos{ /* CURIOSIDADES */
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 862px){
+    .endereco, .formpag_horariofunc span, .redes_sociais{
+        font-size: min(16px, 2vw);
+    }
+
+    .icon_redesSociais{
+        gap: 5px;
+    }
+
+    .icon_redesSociais img{
+        max-width: 70%;
+    }
+}
+
+@media (max-width: 680px){    
+    .parte1{ /*alinha os conteúdos do cabeçalho: logo em cima/ busca e icones abaixo*/
+        height: 240px;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .barra_pesquisa{ 
+       
+        height: 2rem;
+        justify-content: start;
+        align-items: center;
+    }
+
+    .cadastro_compras{
+        width: 200px;
+        height: 80px;
+        justify-content: space-around;
+    }
+
+    .meu_carrinho p{
+        margin-top: 6px;
+    }
+
+    .banner{
+        background-image: url(../img/Console680PlayS4.svg);
+        height: 45rem;
+    }
+
+    .campo_titulo{
+        width: 90%
+    }
+
+    main{ /* QUEM SOMOS? */
+        border-radius: 1%;
+    }
+
+    .curios1 img{ /* CURIOSIDADES */
+        width: 100%;
+    }
+
+    .curios2 img{ /* CURIOSIDADES */
+        width: 150%;
+    }
+
+    .ptodos{ /* CURIOSIDADES */
+        font-size: 1rem;
+    }
+
+    #rodape{
+        margin-top: 30px;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .pesquisa{
+        font-size: 11px;
+    }
+
+    .pesquisa_btn{
+        width: 50%;
+    }
+
+    .cadastro_compras{
+        width: 150px;
+        height: 80px;
+        justify-content: space-around;
+    }
+
+    .minha_conta p, .meu_carrinho p{
+        font-size: 10px;
+    }
+
+    .menu a{
+        font-size: 14px;
+    }
+
+    .avisos{
+        margin-top: 30px;
+    }
+
+    .avisos .parcelamento span, .avisos .entrega span, .avisos .seguranca span, .avisos .assistencia span{
+        font-size: min(18px, 3.5vw);
+    }
+
+    .asterisco{
+        margin-top: 50px;
+    }
+
+    footer{
+        height: 100%;
+    }
+
+    #rodape{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .endereco, .formpag_horariofunc span, .redes_sociais{
+        font-size: 12px;
+        margin-top: 10px;   
+    }
+
+    .curios1 img{ /* CURIOSIDADES */
+        width: 180%;
+    }
+
+    .curios2 img{ /* CURIOSIDADES */
+        width: 200%;
+    }
+
+    .caixa_login{ /* MINHA CONTA */
+        width: 80%;
+    }
+}

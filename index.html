@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Game Mania</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css"> <!-- LINK DA PÁGINA CSS (LINK DO BOOTSTRAP ACIMA DESTE LINK) -->
+    <script src="javascript/jquery-3.6.0.js"></script> <!--INSERINDO JQUERY NO HTML-->
+</head>
+
+<body>
+
+    <!-- CABEÇALHO -->
+    <header> 
+        <div class="parte1 gridposicao1">
+
+            <a href="#"><img class="logo" src="logo/Logo.svg" alt="Logo Game Mania com um controle desenhado acima do nome."></a>
+       
+            <div class="barra_pesquisa">
+                <input class="pesquisa" type="text" placeholder="Pesquise aqui..." required>
+                <a href="#" class="pesquisa_btn"><img src="img/Search.svg" alt="Botão de busca"></a>       
+            </div>
+            
+            <div class="cadastro_compras">
+
+                <div class="minha_conta">
+                    <a href="minha_conta.html"><img src="img/Login.svg" alt="Imagem do login minha conta"></a>
+                    <p>Minha conta</p>
+                </div>
+
+                <div class="meu_carrinho">
+                    <a href="#"><img src="img/ShoppingCart.svg" alt="Carrinho de compras"></a>
+                    <p>Meu carrinho</p>
+                </div>
+
+            </div>
+        </div>
+            
+        <hr> <!-- LINHA VERMELHA DIVIDINDO CABEÇALHO -->
+
+        <div class="parte2-menu gridposicao2">
+            <nav class= "menu">
+                <a href="quem_somos.html">Quem Somos?</a>
+                <a href="produtos.html">Produtos</a>
+                <a href="curiosidades.html">Curiosidades</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- BANNER -->
+    <div class="banner"></div>
+
+    <!-- SEÇÃO DESTAQUE DE PROMOÇÕES -->
+    <section class="destaques">
+        <div class="campo_titulo">
+
+            <div class="box">
+            <p>Destaques do mês!</p>
+            </div>
+
+        </div>
+        
+        <div class="card">
+            <div class="icon">
+                <img src="img/conjPS4.svg" alt="Conjunto PS4">
+            </div>
+            <h3>Conjunto PS4 Completo</h3>
+            <span>De: R$ 7.549,90</span>
+            <h3>Por: R$ 5.999,90</h3>
+            <button>Comprar</button>
+
+        </div>
+        <div class="card">
+            <div class="icon">
+                <img src="img/ps4Fifa22.svg" alt="Jogo FIFA22">
+            </div>
+            <h3>Jogo FIFA22 PS4</h3>
+            <span>De: R$ 349,90</span>
+            <h3>Por: R$ 284,90</h3>
+            <button>Comprar</button>
+
+        </div>
+        <div class="card">
+            <div class="icon">
+                <img src="img/tecladoGamer.svg" alt="Teclado Gamer">
+            </div>
+            <h3>Teclado Gamer</h3>
+            <span>De: R$ 298,90</span>
+            <h3>Por: R$ 199,90</h3>
+            <button>Comprar</button>
+
+        </div>
+        <div class="card">
+            <div class="icon">
+                <img src="img/cadeiraGamer.svg" alt="Cadeira Gamer">
+            </div>
+            <h3>Cadeira Gamer</h3>
+            <span>De: R$ 1.229,90</span>
+            <h3>Por: R$ 899,90</h3>
+            <button>Comprar</button>
+
+        </div>
+        <div class="card">
+            <div class="icon">
+                <img src="img/controlePS4.svg" alt="Controles PS4">
+            </div>           
+            <h3>Par de Controle PS4</h3>
+            <span>De: R$ 749,90</span>
+            <h3>Por: R$ 659,90</h3>
+            <button>Comprar</button>
+
+        </div>
+        <div class="card">
+            <div class="icon">
+                <img src="img/mouseGamer.svg" alt="Mouse Gamer">
+            </div>
+            <h3>Mouse Gamer</h3>
+            <span>De: R$ 259,90</span>
+            <h3>Por: R$ 179,90</h3>
+            <button>Comprar</button>
+
+        </div>
+    </section>
+
+    <!-- INFORMAÇÕES EXTRAS -->
+    <article class="info">
+        <div class="textoPrincipal">
+            <h1>Loja Game Mania, uma loja completa em Tecnologia.</h1>
+        </div>
+        
+        <div class="avisos">
+            <div class="parcelamento">
+                <img src="img/payment.svg" alt="Icone de Pagamento parcelado">
+                <span>Parcelamento em até <br> 10 x sem juros.</span>
+            </div>
+    
+            <div class="entrega">
+                <img src="img/Logistic.svg" alt="Icone de entrega">
+                <span>Entrega Rápida e <br> de Qualidade. <br> Frete Grátis.*</span>
+            </div>
+    
+            <div class="seguranca">
+                <img src="img/Security.svg" alt="Icone de site seguro">
+                <span>Site Seguro, <br> Compra Segura!</span>
+            </div>
+    
+            <div class="assistencia">
+                <img src="img/assistencia.svg" alt="Icone moça com headphone de assistencia ao cliente">
+                <span>Temos serviço de assistência <br> em Tecnologia e Jogos.</span>
+            </div>
+        </div>
+
+        <div class="asterisco">
+            <p>*Frete Grátis, para todo Brasil, nas compras acima de R$ 150,00.</p>
+        </div>
+    </article>
+
+    <!-- TAGS PARA BOOTSTRAP E JAVASCRIPT -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="javascript/script.js"></script>
+</body>
+
+<!-- RODAPÉ -->
+<footer>
+
+    <hr> <!-- LINHA VERMELHA INDICANDO SEPARAÇÃO DO BODY PARA O FOOTER -->
+
+    <div id="rodape">
+
+        <div class="endereco">
+            <span>
+                Av.  Olegário Prestes, 1015 - Vila da Prata <br>
+                São Paulo - SP <br>
+                Telefone: 11 2101-3345 <br>
+                CNPJ 11.261.451/0001-65 <br>
+                E-mail: informacoes@gamemania.com.br</span>
+        </div>
+
+        <div class="formpag_horariofunc">
+            <span>Aceitamos  várias formas de pagamento!</span>
+            <img src="img/bandeiras.svg" alt="Icone das bandeiras de cartoes.">
+            <span>Horário de Atendimento <br>
+                Loja Física: <br>
+                Seg á Sex. das 09h às 18h. <br>
+                Sáb. das 09h às 13h</span>
+        </div>
+        
+        <div class="redes_sociais">
+            <span>Siga-nos nas Redes Sociais <br>
+                e acompanhe  as novidades. </span>
+                <div class="icon_redesSociais">
+                    <a href="https://web.whatsapp.com/"><img src="img/whatsapp.svg" alt="Icone do whatsapp."></a>
+                    <a href="https://www.instagram.com/"><img src="img/instagram.svg" alt="Icone do instragram."></a>
+                    <a href="https://www.facebook.com/"><img src="img/facebook.svg" alt="Icone do facebook."></a>
+                </div>   
+        </div>
+    </div>
+</footer>
+</html>
