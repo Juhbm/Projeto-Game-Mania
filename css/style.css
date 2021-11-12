@@ -137,14 +137,14 @@ hr{ /*linha vermelha que divide o cabeçalho em 2 partes*/
 
 /* BANNER */
 
-.banner{
+/* .banner{ (essa é a opção de css puro. O bannner está em carousel no html com bootstrap.)
     width: 100vw;
     height: 50vw;
     background-image: url(../img/triomariobros.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-}
+} */
 
 /* SEÇÃO DE DESTAQUES */
 
@@ -560,7 +560,6 @@ h3{
     display: flex;
     align-items: center;
     justify-content: center;
-
 }
 
 .curiosidades{
@@ -576,11 +575,13 @@ h3{
 }
 
 .curios1 img{
-    width: 80%;
+    width: 20rem;
+    height: 15rem;
 }
 
 .curios2 img{
-    width: 100%
+    width: 20rem;
+    height: 15rem;
 }
 
 .curios1{
@@ -655,12 +656,12 @@ label{ /* configuração para fazer o Login: e Senha: aparecer no campo de digit
 }
 
 .inserir:focus + label{ /*quando campo estiver clicado o texto Login: Senha: sobe e altera cor para vermelho*/
-    transform: translateY(-14px); /* label sobe quando clicar no campo*/
+    transform: translateY(-14px); /* label sobe quando clicar no campo -- esse evento não funcionou no chrome, mas funciona no firefox dev*/
     color: #FF0101;
 }
 
 .inserir:not(:placeholder-shown) + label{ /*ao digitar no campo Login: e Senha: permanecerão acima e na cor vermelha e tornará negrito*/
-    transform: translateY(-14px);
+    transform: translateY(-14px); /*esse evento não funcionou no chrome, mas funciona no firefox dev*/
     color: #FF0101;
     font-weight: bold;
 }
@@ -774,9 +775,9 @@ label{ /* configuração para fazer o Login: e Senha: aparecer no campo de digit
         height: 2.5rem;
     }
 
-    .banner{
-        background-image: url(../img/videogames950.svg);
-    }
+    /* .banner{ se usar o css puro
+        background-image: url(../img/videogame950.png);
+    } */
 
     .avisos{
         width: 80%;
@@ -793,6 +794,15 @@ label{ /* configuração para fazer o Login: e Senha: aparecer no campo de digit
 }
 
 @media (max-width: 862px){
+    .box{
+        width: 30rem;
+        height: 3.5rem;
+    }
+
+    .box p{
+        font-size: 30px;
+    }
+    
     .endereco, .formpag_horariofunc span, .redes_sociais{
         font-size: min(16px, 2vw);
     }
@@ -803,6 +813,16 @@ label{ /* configuração para fazer o Login: e Senha: aparecer no campo de digit
 
     .icon_redesSociais img{
         max-width: 70%;
+    }
+
+    .curios1 img{
+        width: 15rem;
+        height: 10rem;
+    }
+    
+    .curios2 img{
+        width: 15rem;
+        height: 10rem;
     }
 }
 
@@ -831,25 +851,22 @@ label{ /* configuração para fazer o Login: e Senha: aparecer no campo de digit
         margin-top: 6px;
     }
 
-    .banner{
-        background-image: url(../img/Console680PlayS4.svg);
+    /* .banner{ se usar o css puro
+        background-image: url(../img/consolps4.png);
         height: 45rem;
+    } */
+
+    .box{
+        width: 25rem;
+        height: 3.5rem;  
     }
 
-    .campo_titulo{
-        width: 90%
+    .box p{
+        font-size: 28px;
     }
 
     main{ /* QUEM SOMOS? */
         border-radius: 1%;
-    }
-
-    .curios1 img{ /* CURIOSIDADES */
-        width: 100%;
-    }
-
-    .curios2 img{ /* CURIOSIDADES */
-        width: 150%;
     }
 
     .ptodos{ /* CURIOSIDADES */
@@ -858,6 +875,16 @@ label{ /* configuração para fazer o Login: e Senha: aparecer no campo de digit
 
     #rodape{
         margin-top: 30px;
+    }
+
+    .curios1 img{
+        width: 10rem;
+        height: 8rem;
+    }
+    
+    .curios2 img{
+        width: 10rem;
+        height: 8rem;
     }
 }
 
@@ -882,6 +909,15 @@ label{ /* configuração para fazer o Login: e Senha: aparecer no campo de digit
 
     .menu a{
         font-size: 14px;
+    }
+
+    .box{
+        width: 20rem;
+        height: 3.5rem;
+    }
+
+    .box p{
+        font-size: 22px;
     }
 
     .avisos{
@@ -910,12 +946,18 @@ label{ /* configuração para fazer o Login: e Senha: aparecer no campo de digit
         margin-top: 10px;   
     }
 
-    .curios1 img{ /* CURIOSIDADES */
-        width: 180%;
+    .curios1 img{
+        width: 5rem;
+        height: 5rem;
+    }
+    
+    .curios2 img{
+        width: 5rem;
+        height: 4rem;
     }
 
-    .curios2 img{ /* CURIOSIDADES */
-        width: 200%;
+    .ptodos{
+        font-size: 0.8rem;
     }
 
     .caixa_login{ /* MINHA CONTA */
