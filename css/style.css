@@ -72,52 +72,40 @@ header{
 
 .cadastro_compras{ /*definindo o espaco container para minha conta e meu carrinho*/
     width: 350px;
-    height: 160px;
+    height: 100px;
     display: flex;
     justify-content: space-between;
-    position: relative;
-}
-
-.minha_conta{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    font-size: min(24px, 2vw); /* min() usará o menor valor, entre os 2 valores declarados, para exibir de acordo com tam da tela*/
-}
-
-.minha_conta img{
-    width: 80%;
-    height: 80%;
-}
-
-.meu_carrinho{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;    
-    font-size: min(24px, 2vw);
-    position: relative;
-}
-
-.quantidade{
-    display: flex;
-    justify-content: center;
     align-items: center;
-    position: absolute;
-    width: 50px;
-    height: 40px;
-    top: -5px;
-    right: 45px;
-    background: #FEFEFE /*#000000*/;
-    border-radius: 15px;
-    color: #000000 /*#FEFEFE*/;
-    border: 2px solid #000000;
-    text-align: center;
-    font-weight: bold;
+    position: relative; /* é relative para agrupar a bolinha da quantidade de produtos nessa div*/
+    font-size: 1.5rem;
 }
 
-.meu_carrinho img{
-    width: 70%;
-    height: 70%;
+.cadastro_compras .minha_conta{ /*alinhamento em coluna do icone com o texto*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cadastro_compras .meu_carrinho{ /*alinhamento em coluna do icone com o texto*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cadastro_compras .icons img{
+    width: 3.6rem;
+    height: 3.6rem;
+}
+
+.cadastro_compras #cart_total{ /*criação da bolinha de quantidades de prod no carrinho*/
+    font-size: 1rem;
+    position: absolute;
+    top: -15px;
+    right: 25px;
+    background-color: #000000;
+    padding: 0.4rem 0.8rem;
+    border-radius: 100%;
+    color: #FEFEFE;
 }
 
 hr{ /*linha vermelha que divide o cabeçalho em 2 partes*/
@@ -793,6 +781,14 @@ label{ /* configuração para fazer o Login: e Senha: aparecer no campo de digit
     .curiosidades{ /* CURIOSIDADES */
         width: 80%;
     }
+
+    .cadastro_compras{
+        font-size: 1.3rem;
+    }
+
+    .cadastro_compras #cart_total{
+        right: 18px;
+    }
 }
 
 @media (max-width: 950px){    
@@ -814,6 +810,10 @@ label{ /* configuração para fazer o Login: e Senha: aparecer no campo de digit
         background-image: url(../img/videogame950.png);
     } */
 
+    .cadastro_compras{
+        width: 400px;
+    }
+
     .avisos{
         width: 80%;
         column-gap: 2rem;
@@ -829,6 +829,23 @@ label{ /* configuração para fazer o Login: e Senha: aparecer no campo de digit
 }
 
 @media (max-width: 862px){
+    .cadastro_compras .minha_conta{
+        text-align: center;
+    }
+
+    .cadastro_compras .meu_carrinho{
+        text-align: center;
+    }
+
+    .cadastro_compras{
+        font-size: 1.2rem;
+    }
+
+    .cadastro_compras #cart_total{
+        top: -15px;
+        right: 15px;
+    }
+
     .box{
         width: 30rem;
         height: 3.5rem;
@@ -861,7 +878,14 @@ label{ /* configuração para fazer o Login: e Senha: aparecer no campo de digit
     }
 }
 
-@media (max-width: 680px){    
+@media (max-width: 846px){
+    .cadastro_compras #cart_total{
+        top: -25px;
+        right: 10px;
+    }
+}
+
+@media (max-width: 680px){
     .parte1{ /*alinha os conteúdos do cabeçalho: logo em cima/ busca e icones abaixo*/
         height: 240px;
         flex-wrap: wrap;
@@ -870,7 +894,6 @@ label{ /* configuração para fazer o Login: e Senha: aparecer no campo de digit
     }
 
     .barra_pesquisa{ 
-       
         height: 2rem;
         justify-content: start;
         align-items: center;
@@ -879,11 +902,14 @@ label{ /* configuração para fazer o Login: e Senha: aparecer no campo de digit
     .cadastro_compras{
         width: 200px;
         height: 80px;
-        justify-content: space-around;
+        justify-content: space-between;
+        font-size: 0.8rem;
     }
 
-    .meu_carrinho p{
-        margin-top: 6px;
+    .cadastro_compras #cart_total{
+        top: -20px;
+        right: -10px;
+        padding: 0.25rem 0.6rem;
     }
 
     /* .banner{ se usar o css puro
@@ -932,18 +958,24 @@ label{ /* configuração para fazer o Login: e Senha: aparecer no campo de digit
         width: 50%;
     }
 
-    .cadastro_compras{
-        width: 150px;
-        height: 80px;
-        justify-content: space-around;
-    }
-
-    .minha_conta p, .meu_carrinho p{
-        font-size: 10px;
-    }
-
     .menu a{
         font-size: 14px;
+    }
+
+    .cadastro_compras .icons{
+        width: 3.2rem;
+        height: 3.2rem;
+        margin-bottom: 10px;
+    }
+
+    .cadastro_compras #cart_total{
+        top: -12px;
+        right: 5px;
+    }
+
+    .cadastro_compras{
+        width: 180px;
+        justify-content: space-around;
     }
 
     .box{
