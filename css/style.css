@@ -951,7 +951,7 @@ label{ /* configuração para fazer o Login: e Senha: aparecer no campo de digit
 
 @media (min-width: 320px) and (max-width: 480px) {
     .pesquisa{
-        font-size: 11px;
+        font-size: 0.5rem;
     }
 
     .pesquisa_btn{
@@ -974,7 +974,8 @@ label{ /* configuração para fazer o Login: e Senha: aparecer no campo de digit
     }
 
     .cadastro_compras{
-        width: 180px;
+        width: 170px;
+        height: 70px;
         justify-content: space-around;
     }
 

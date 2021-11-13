@@ -9,32 +9,35 @@
 </head>
 
 <body>
-    <header>
+
+    <!-- CABEÇALHO -->
+    <header> 
         <div class="parte1 gridposicao1">
 
-            <a href="index.html"><img src="logo/Logo.svg" alt="Logo Game Mania com um controle desenhado acima do nome."></a>
-
+            <a href="index.html"><img class="logo" src="logo/Logo.svg" alt="Logo Game Mania com um controle desenhado acima do nome."></a>
+       
             <div class="barra_pesquisa">
                 <input class="pesquisa" type="text" placeholder="Pesquise aqui..." required>
-                <a href="#" class="pesquisa_btn"><img src="img/Search.svg" alt="Botão de busca"></a>
+                <a href="#" class="pesquisa_btn"><img src="img/Search.svg" alt="Botão de busca"></a>       
             </div>
-                
+            
             <div class="cadastro_compras">
-    
+
                 <div class="minha_conta">
-                    <a href="minha_conta.html"><img src="img/Login.svg" alt="Imagem do login minha conta"></a>
+                    <a href="minha_conta.html" class="icons"><img src="img/login.png" alt="Imagem do login minha conta"></a>
                     <p>Minha conta</p>
                 </div>
-    
+                
                 <div class="meu_carrinho">
-                    <a href="#"><img src="img/ShoppingCart.svg" alt="Carrinho de compras"></a>
+                    <a href="#" class="icons"><img src="img/carrinho.png" alt="Carrinho de compras"></a>
                     <p>Meu carrinho</p>
                 </div>
-    
+                <span id="cart_total">0</span>
+
             </div>
         </div>
-
-        <hr>
+            
+        <hr> <!-- LINHA VERMELHA DIVIDINDO CABEÇALHO -->
 
         <div class="parte2-menu gridposicao2">
             <nav class= "menu">
@@ -44,6 +47,7 @@
             </nav>
         </div>
     </header>
+
 
     <div class="titulo">
         <h1 class="pergunta">Você Sabia?</h1>
