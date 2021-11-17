@@ -108,6 +108,17 @@ header{
     color: #FEFEFE;
 }
 
+.cadastro_compras #i_cart_total{ /*index*/
+    font-size: 1rem;
+    position: absolute;
+    top: -15px;
+    right: 25px;
+    background-color: #000000;
+    padding: 0.4rem 0.8rem;
+    border-radius: 100%;
+    color: #FEFEFE;
+}
+
 hr{ /*linha vermelha que divide o cabeçalho em 2 partes*/
     width: 100%;
     border: 0;
@@ -370,6 +381,36 @@ hr{
     border: 0;
     border-top: 3px solid #FF0101;
     opacity: 1;   
+}
+
+/* ----- carrinho de compras ----- */
+
+.carrinho_sobrep{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    transition: all 0.3s linear;
+    background: #B8BCBD;
+    z-index: 2;
+    visibility: hidden;
+}
+
+.carrinho{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+    background: #dad8d8 ;
+    z-index: 3;
+    background: #FEFEFE;
+    padding: 1.5rem;
+    transition: all 0.3s linear;
+    transform: translateX(100%);
 }
 
 /* RODAPÉ */
@@ -789,6 +830,10 @@ label{ /* configuração para fazer o Login: e Senha: aparecer no campo de digit
     .cadastro_compras #cart_total{
         right: 18px;
     }
+
+    .cadastro_compras #i_cart_total{ /*index*/
+        right: 18px;
+    }
 }
 
 @media (max-width: 950px){    
@@ -838,12 +883,17 @@ label{ /* configuração para fazer o Login: e Senha: aparecer no campo de digit
     }
 
     .cadastro_compras{
-        font-size: 1.2rem;
+        font-size: 1.0rem;
     }
 
     .cadastro_compras #cart_total{
+        top: -5px;
+        right: 5px;
+    }
+    
+    .cadastro_compras #i_cart_total{ /*index*/
         top: -15px;
-        right: 15px;
+        right: 5px;
     }
 
     .box{
@@ -880,7 +930,12 @@ label{ /* configuração para fazer o Login: e Senha: aparecer no campo de digit
 
 @media (max-width: 846px){
     .cadastro_compras #cart_total{
-        top: -25px;
+        top: -5px;
+        right: 5px;
+    }
+
+    .cadastro_compras #i_cart_total{ /*index*/
+        top: -15px;
         right: 10px;
     }
 }
@@ -907,9 +962,15 @@ label{ /* configuração para fazer o Login: e Senha: aparecer no campo de digit
     }
 
     .cadastro_compras #cart_total{
-        top: -20px;
-        right: -10px;
+        top: -5px;
+        right: -2px;
         padding: 0.25rem 0.6rem;
+    }
+
+    .cadastro_compras #i_cart_total{ /*index*/
+        top: -20px;
+        right: -5px;
+        padding: 0.2rem 0.6rem;
     }
 
     /* .banner{ se usar o css puro
@@ -965,12 +1026,27 @@ label{ /* configuração para fazer o Login: e Senha: aparecer no campo de digit
     .cadastro_compras .icons{
         width: 3.2rem;
         height: 3.2rem;
-        margin-bottom: 10px;
+    }
+
+    .minha_conta p{
+        margin: 0;
+        margin-top: 5px;
+    }
+
+    .meu_carrinho p{
+        margin: 0;
+        margin-top: 5px;
     }
 
     .cadastro_compras #cart_total{
         top: -12px;
-        right: 5px;
+        right: 2px;
+    }
+
+    .cadastro_compras #i_cart_total{ /*index*/
+        top: -15px;
+        right: 2px;
+
     }
 
     .cadastro_compras{
