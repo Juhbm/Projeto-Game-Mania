@@ -606,12 +606,7 @@ li{
     row-gap: 30px;   
 }
 
-.curios1 img{
-    width: 20rem;
-    height: 15rem;
-}
-
-.curios2 img{
+.imagem{
     width: 20rem;
     height: 15rem;
 }
@@ -890,12 +885,7 @@ label{ /* configuração para fazer o Login: e Senha: aparecer no campo de digit
         max-width: 70%;
     }
 
-    .curios1 img{
-        width: 15rem;
-        height: 10rem;
-    }
-    
-    .curios2 img{
+    .imagem{
         width: 15rem;
         height: 10rem;
     }
@@ -972,12 +962,7 @@ label{ /* configuração para fazer o Login: e Senha: aparecer no campo de digit
         margin-top: 30px;
     }
 
-    .curios1 img{
-        width: 10rem;
-        height: 8rem;
-    }
-    
-    .curios2 img{
+    .imagem{
         width: 10rem;
         height: 8rem;
     }
@@ -1063,16 +1048,11 @@ label{ /* configuração para fazer o Login: e Senha: aparecer no campo de digit
         margin-top: 10px;   
     }
 
-    .curios1 img{
+    .imagem{
         width: 5rem;
         height: 5rem;
     }
     
-    .curios2 img{
-        width: 5rem;
-        height: 4rem;
-    }
-
     .ptodos{
         font-size: 0.8rem;
     }
