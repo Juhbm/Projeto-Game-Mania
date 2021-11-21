@@ -126,29 +126,21 @@ function renderizarDestaques(){
     
     /* função que detalha a quantidade de cada produto que está sendo inserido no carrinho.*/
     
-    function definindoItens(produto){
-        let itensCarrinho = localStorage.getItem('produtosNoCarrinho');
-        itensCarrinho = parseInt(itensCarrinho);
-        // itensCarrinho = JSON.parse(itensCarrinho);
-    
-        if(itensCarrinho != null){
-            
-            if(itensCarrinho[produto.tag] == undefined) {
-                itensCarrinho = {
-                    ...itensCarrinho,
-                    [produto.tag]: produto
-                }
-            }
-            itensCarrinho[produto.tag].noCarrinho += 1; /*problema que ainda não consegui resolver: considera que noCarrinho não é tipo string...*/
+     function definindoItens(produto) {
+        
+        let itensCarrinho = []; /*itens no carrinho igual a array*/
+        if (localStorage.getItem("produtosNoCarrinho") != null)
+            itensCarrinho = JSON.parse(localStorage.getItem("produtosNoCarrinho"));
+
+        let indice = itensCarrinho.findIndex(p => p.tag == produto.tag); /*função do array q procura o indice de um determinado prod*/
+        if (indice >= 0) {
+            itensCarrinho[indice].noCarrinho += 1; /*atualiza a qtd do produto q já está no carrinho.*/
         } else {
-            produto.noCarrinho = 1;
-            itensCarrinho = {
-                [produto.tag]: produto
-            }
+            produto.noCarrinho = 1; /*se não tem prod no carrinho será add*/
+            itensCarrinho.push(produto);
         }
-             
-        localStorage.setItem("produtosNocarrinho", JSON.stringify /*converte os valores de js para uma string json*/
-        (itensCarrinho));
+
+        localStorage.setItem("produtosNoCarrinho", JSON.stringify(itensCarrinho));
     }
 
     onloadItensQuant();
@@ -166,13 +158,13 @@ function renderizarDestaques(){
 /* --- JQUERY --- */ 
 
 /*função buscar com jQuery -- puxa dentro do input os produtos que tem na seção destaque*/
+    
+    $(document).ready(function(){
+    $("#myInput").on("keyup", function(){
+    var value = $(this). val().toLowerCase();
+    $("#destaques .card").filter(function(){
+    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1); 
 
-        $(document).ready(function(){
-       $("#myInput").on("keyup", function(){
-        var value = $(this). val().toLowerCase();
-        $("#destaques .card").filter(function(){
-       $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1); 
-
-        });
+       });
     });
 });
