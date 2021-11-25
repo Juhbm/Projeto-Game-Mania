@@ -1,6 +1,6 @@
 /* --- JAVASCRIPT --- */
 
-// alert('BOM DIA! \n Mensagem enviada pelo console')
+// alert('Olá! \n Esta é a página Home da loja Game Mania.')
 // console.log('Exemplo de comando alert');
 
 // let nome = prompt('Bem - Vindo(a) a Loja Game Mania. Qual o seu nome?')

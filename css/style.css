@@ -491,7 +491,7 @@ h3{
 
 .diferenciais{
     font-size: 1.25rem;
-    text-align: center;
+    text-align: left;
 }
 
 .pqs{
@@ -885,7 +885,7 @@ label{ /* configuração para fazer o Login: e Senha: aparecer no campo de digit
         max-width: 70%;
     }
 
-    .imagem{
+    .imagem{ /* CURIOSIDADES */
         width: 15rem;
         height: 10rem;
     }
@@ -950,6 +950,10 @@ label{ /* configuração para fazer o Login: e Senha: aparecer no campo de digit
         font-size: 28px;
     }
 
+    #rodape{
+        margin-top: 30px;
+    }
+
     main{ /* QUEM SOMOS? */
         border-radius: 1%;
     }
@@ -958,11 +962,7 @@ label{ /* configuração para fazer o Login: e Senha: aparecer no campo de digit
         font-size: 1rem;
     }
 
-    #rodape{
-        margin-top: 30px;
-    }
-
-    .imagem{
+    .imagem{ /* CURIOSIDADES */
         width: 10rem;
         height: 8rem;
     }
@@ -1004,7 +1004,6 @@ label{ /* configuração para fazer o Login: e Senha: aparecer no campo de digit
     .cadastro_compras #i_cart_total{ /*index*/
         top: -15px;
         right: 2px;
-
     }
 
     .cadastro_compras{
@@ -1048,12 +1047,12 @@ label{ /* configuração para fazer o Login: e Senha: aparecer no campo de digit
         margin-top: 10px;   
     }
 
-    .imagem{
+    .imagem{ /* CURIOSIDADES */
         width: 5rem;
         height: 5rem;
     }
     
-    .ptodos{
+    .ptodos{ /* CURIOSIDADES */
         font-size: 0.8rem;
     }
 
