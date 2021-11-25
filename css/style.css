@@ -724,7 +724,6 @@ label{ /* configuração para fazer o Login: e Senha: aparecer no campo de digit
     color: #000000;
 }
 
-
 /* APLICANDO @media query PARA RESPONSIVIDADE - breakpoints - */
 
 @media (max-width: 1920px){ 
